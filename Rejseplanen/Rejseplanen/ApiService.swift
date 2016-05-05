@@ -12,6 +12,7 @@ let API_DEPARTUREBOARD_URL = "http://xmlopen.rejseplanen.dk/bin/rest.exe/departu
 class ApiService {
     
     static let sharedInstance = ApiService()
+    var idStop = "8600551"
     
     func apiGetRequest(path: String, onCompletion: (JSON, NSError?) -> Void) {
         let request = NSMutableURLRequest(URL: NSURL(string: path)!)
@@ -26,7 +27,8 @@ class ApiService {
     }
     
     func getDepartureboards(onCompletion: (JSON, NSError?) -> Void) {
-        apiGetRequest(API_DEPARTUREBOARD_URL, onCompletion: { json, err in
+        let URL = "http://xmlopen.rejseplanen.dk/bin/rest.exe/departureBoard?id=\(idStop)&format=json"
+        apiGetRequest(URL, onCompletion: { json, err in
             onCompletion(json as JSON, err as NSError?)
         })
     }

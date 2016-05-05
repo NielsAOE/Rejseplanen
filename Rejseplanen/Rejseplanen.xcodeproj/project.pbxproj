@@ -12,11 +12,21 @@
 		B837011F1CDB9F9B006E2664 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B837011E1CDB9F9B006E2664 /* SecondViewController.swift */; };
 		B83701221CDB9F9B006E2664 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B83701201CDB9F9B006E2664 /* Main.storyboard */; };
 		B83701241CDB9F9B006E2664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B83701231CDB9F9B006E2664 /* Assets.xcassets */; };
+		B84797391CDBB98B00551AA7 /* ViewControllerSamples.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B84797381CDBB98B00551AA7 /* ViewControllerSamples.storyboard */; };
+		B84797BE1CDBBCC200551AA7 /* RejseplanenStoppesteder.csv in Resources */ = {isa = PBXBuildFile; fileRef = B84797BD1CDBBCC200551AA7 /* RejseplanenStoppesteder.csv */; };
+		B84797C11CDBBFD700551AA7 /* Stop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84797C01CDBBFD700551AA7 /* Stop.swift */; };
+		B84797C31CDBC25900551AA7 /* Stop+SampleStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84797C21CDBC25900551AA7 /* Stop+SampleStop.swift */; };
 		B84830221CDBA02C0094A949 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830211CDBA02C0094A949 /* SwiftyJSON.swift */; };
 		B84830241CDBA03F0094A949 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830231CDBA03F0094A949 /* ApiService.swift */; };
 		B84830271CDBA08B0094A949 /* ApiDeparture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830251CDBA08B0094A949 /* ApiDeparture.swift */; };
 		B84830281CDBA08B0094A949 /* ApiDepartureboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830261CDBA08B0094A949 /* ApiDepartureboard.swift */; };
 		B848302A1CDBA0A30094A949 /* DepartureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830291CDBA0A30094A949 /* DepartureCell.swift */; };
+		B848302C1CDBB51B0094A949 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848302B1CDBB51B0094A949 /* SearchResultsViewController.swift */; };
+		B848302F1CDBB6D80094A949 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B848302E1CDBB6D80094A949 /* DataItem.swift */; };
+		B84830311CDBB6DC0094A949 /* DataItem+ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830301CDBB6DC0094A949 /* DataItem+ImageName.swift */; };
+		B84830331CDBB6E00094A949 /* DataItem+SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830321CDBB6E00094A949 /* DataItem+SampleData.swift */; };
+		B84830351CDBB6E70094A949 /* DataItemCellComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830341CDBB6E70094A949 /* DataItemCellComposer.swift */; };
+		B84830371CDBB6EA0094A949 /* DataItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84830361CDBB6EA0094A949 /* DataItemCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,11 +37,21 @@
 		B83701211CDB9F9B006E2664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B83701231CDB9F9B006E2664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B83701251CDB9F9B006E2664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B84797381CDBB98B00551AA7 /* ViewControllerSamples.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ViewControllerSamples.storyboard; sourceTree = "<group>"; };
+		B84797BD1CDBBCC200551AA7 /* RejseplanenStoppesteder.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RejseplanenStoppesteder.csv; sourceTree = "<group>"; };
+		B84797C01CDBBFD700551AA7 /* Stop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stop.swift; sourceTree = "<group>"; };
+		B84797C21CDBC25900551AA7 /* Stop+SampleStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Stop+SampleStop.swift"; sourceTree = "<group>"; };
 		B84830211CDBA02C0094A949 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B84830231CDBA03F0094A949 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		B84830251CDBA08B0094A949 /* ApiDeparture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDeparture.swift; sourceTree = "<group>"; };
 		B84830261CDBA08B0094A949 /* ApiDepartureboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDepartureboard.swift; sourceTree = "<group>"; };
 		B84830291CDBA0A30094A949 /* DepartureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DepartureCell.swift; sourceTree = "<group>"; };
+		B848302B1CDBB51B0094A949 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		B848302E1CDBB6D80094A949 /* DataItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
+		B84830301CDBB6DC0094A949 /* DataItem+ImageName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataItem+ImageName.swift"; sourceTree = "<group>"; };
+		B84830321CDBB6E00094A949 /* DataItem+SampleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataItem+SampleData.swift"; sourceTree = "<group>"; };
+		B84830341CDBB6E70094A949 /* DataItemCellComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataItemCellComposer.swift; sourceTree = "<group>"; };
+		B84830361CDBB6EA0094A949 /* DataItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataItemCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +70,7 @@
 			children = (
 				B83701191CDB9F9B006E2664 /* Rejseplanen */,
 				B83701181CDB9F9B006E2664 /* Products */,
+				B847973C1CDBBB3D00551AA7 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +85,9 @@
 		B83701191CDB9F9B006E2664 /* Rejseplanen */ = {
 			isa = PBXGroup;
 			children = (
+				B8EF2A681CDBCEB700B98C62 /* Stop */,
+				B84797BF1CDBBF6200551AA7 /* Data items */,
+				B848302D1CDBB6AD0094A949 /* Search */,
 				B84830201CDBA00B0094A949 /* API */,
 				B837011A1CDB9F9B006E2664 /* AppDelegate.swift */,
 				B837011C1CDB9F9B006E2664 /* DepartureboardViewController.swift */,
@@ -76,6 +100,23 @@
 			path = Rejseplanen;
 			sourceTree = "<group>";
 		};
+		B847973C1CDBBB3D00551AA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B84797BD1CDBBCC200551AA7 /* RejseplanenStoppesteder.csv */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		B84797BF1CDBBF6200551AA7 /* Data items */ = {
+			isa = PBXGroup;
+			children = (
+				B84797C01CDBBFD700551AA7 /* Stop.swift */,
+				B84797C21CDBC25900551AA7 /* Stop+SampleStop.swift */,
+			);
+			name = "Data items";
+			sourceTree = "<group>";
+		};
 		B84830201CDBA00B0094A949 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +126,27 @@
 				B84830211CDBA02C0094A949 /* SwiftyJSON.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		B848302D1CDBB6AD0094A949 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B848302E1CDBB6D80094A949 /* DataItem.swift */,
+				B84830301CDBB6DC0094A949 /* DataItem+ImageName.swift */,
+				B84830321CDBB6E00094A949 /* DataItem+SampleData.swift */,
+				B84830341CDBB6E70094A949 /* DataItemCellComposer.swift */,
+				B84830361CDBB6EA0094A949 /* DataItemCollectionViewCell.swift */,
+				B848302B1CDBB51B0094A949 /* SearchResultsViewController.swift */,
+				B84797381CDBB98B00551AA7 /* ViewControllerSamples.storyboard */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		B8EF2A681CDBCEB700B98C62 /* Stop */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Stop;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +207,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84797391CDBB98B00551AA7 /* ViewControllerSamples.storyboard in Resources */,
 				B83701241CDB9F9B006E2664 /* Assets.xcassets in Resources */,
+				B84797BE1CDBBCC200551AA7 /* RejseplanenStoppesteder.csv in Resources */,
 				B83701221CDB9F9B006E2664 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,14 +221,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B84830331CDBB6E00094A949 /* DataItem+SampleData.swift in Sources */,
+				B848302F1CDBB6D80094A949 /* DataItem.swift in Sources */,
+				B84797C11CDBBFD700551AA7 /* Stop.swift in Sources */,
+				B84830351CDBB6E70094A949 /* DataItemCellComposer.swift in Sources */,
 				B84830281CDBA08B0094A949 /* ApiDepartureboard.swift in Sources */,
 				B837011F1CDB9F9B006E2664 /* SecondViewController.swift in Sources */,
 				B848302A1CDBA0A30094A949 /* DepartureCell.swift in Sources */,
 				B84830271CDBA08B0094A949 /* ApiDeparture.swift in Sources */,
 				B84830241CDBA03F0094A949 /* ApiService.swift in Sources */,
+				B84797C31CDBC25900551AA7 /* Stop+SampleStop.swift in Sources */,
+				B84830371CDBB6EA0094A949 /* DataItemCollectionViewCell.swift in Sources */,
 				B837011B1CDB9F9B006E2664 /* AppDelegate.swift in Sources */,
 				B837011D1CDB9F9B006E2664 /* DepartureboardViewController.swift in Sources */,
+				B848302C1CDBB51B0094A949 /* SearchResultsViewController.swift in Sources */,
 				B84830221CDBA02C0094A949 /* SwiftyJSON.swift in Sources */,
+				B84830311CDBB6DC0094A949 /* DataItem+ImageName.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
