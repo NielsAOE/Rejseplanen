@@ -32,18 +32,18 @@ struct DataItem: Equatable {
         return "\(group.rawValue).\(number)"
     }
     
-    var displayURL: NSURL {
-        let components = NSURLComponents()
+    var displayURL: URL {
+        var components = URLComponents()
         components.scheme = "uikitcatalog"
         components.path = "dataItem"
-        components.queryItems = [NSURLQueryItem(name: "identifier", value: identifier)]
+        components.queryItems = [URLQueryItem(name: "identifier", value: identifier)]
         
-        return components.URL!
+        return components.url!
     }
     
-    var imageURL: NSURL {
-        let mainBundle = NSBundle.mainBundle()
-        guard let imageURL = mainBundle.URLForResource(imageName, withExtension: nil) else { fatalError("Error determining local image URL.") }
+    var imageURL: URL {
+        let mainBundle = Bundle.main
+        guard let imageURL = mainBundle.url(forResource: imageName, withExtension: nil) else { fatalError("Error determining local image URL.") }
         
         return imageURL
     }

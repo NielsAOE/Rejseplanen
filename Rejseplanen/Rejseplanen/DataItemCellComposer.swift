@@ -16,11 +16,11 @@ class DataItemCellComposer {
         queues contain operations that process images for `DataItem`s before updating
         the cell's `UIImageView`.
     */
-    private var operationQueues = [DataItemCollectionViewCell: NSOperationQueue]()
+    fileprivate var operationQueues = [DataItemCollectionViewCell: OperationQueue]()
 
     // MARK: Implementation
     
-    func composeCell(cell: DataItemCollectionViewCell, withDataItem dataItem: Stop) {
+    func composeCell(_ cell: DataItemCollectionViewCell, withDataItem dataItem: Stop) {
         // Cancel any queued operations to process images for the cell.
         let operationQueue = operationQueueForCell(cell)
         operationQueue.cancelAllOperations()
@@ -40,12 +40,12 @@ class DataItemCellComposer {
         Returns the `NSOperationQueue` for a given cell. Creates and stores a new
         queue if one doesn't already exist.
     */
-    private func operationQueueForCell(cell: DataItemCollectionViewCell) -> NSOperationQueue {
+    fileprivate func operationQueueForCell(_ cell: DataItemCollectionViewCell) -> OperationQueue {
         if let queue = operationQueues[cell] {
             return queue
         }
         
-        let queue = NSOperationQueue()
+        let queue = OperationQueue()
         operationQueues[cell] = queue
         
         return queue

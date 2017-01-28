@@ -13,11 +13,11 @@ class SearchResultsViewController: UICollectionViewController, UISearchResultsUp
     
     static let storyboardIdentifier = "SearchResultsViewController"
 
-    private let cellComposer = DataItemCellComposer()
+    fileprivate let cellComposer = DataItemCellComposer()
 
-    private let allDataItems = Stop.sampleStops
+    fileprivate let allDataItems = Stop.sampleStops
     
-    private var filteredDataItems = Stop.sampleStops
+    fileprivate var filteredDataItems = Stop.sampleStops
     
     var filterString = "" {
         didSet {
@@ -29,7 +29,7 @@ class SearchResultsViewController: UICollectionViewController, UISearchResultsUp
                 filteredDataItems = allDataItems
             }
             else {
-                filteredDataItems = allDataItems.filter { $0.name.localizedStandardContainsString(filterString) }
+                filteredDataItems = allDataItems.filter { $0.name.localizedStandardContains(filterString) }
             }
             
             // Reload the collection view to reflect the changes.
@@ -39,22 +39,22 @@ class SearchResultsViewController: UICollectionViewController, UISearchResultsUp
     
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filteredDataItems.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // Dequeue a cell from the collection view.
-        return collectionView.dequeueReusableCellWithReuseIdentifier(DataItemCollectionViewCell.reuseIdentifier, forIndexPath: indexPath)
+        return collectionView.dequeueReusableCell(withReuseIdentifier: DataItemCollectionViewCell.reuseIdentifier, for: indexPath)
     }
     
     // MARK: UICollectionViewDelegate
     
-    override func collectionView(collectionView: UICollectionView, willDisplayCell cell: UICollectionViewCell, forItemAtIndexPath indexPath: NSIndexPath) {
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell = cell as? DataItemCollectionViewCell else { fatalError("Expected to display a `DataItemCollectionViewCell`.") }
         let item = filteredDataItems[indexPath.row]
         
@@ -62,17 +62,17 @@ class SearchResultsViewController: UICollectionViewController, UISearchResultsUp
         cellComposer.composeCell(cell, withDataItem: item)
     }
     
-    override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        if let cell = collectionView.cellForItemAtIndexPath(indexPath) as? DataItemCollectionViewCell {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let cell = collectionView.cellForItem(at: indexPath) as? DataItemCollectionViewCell {
             print((cell.representedDataItem?.id)!)
-            ApiService.sharedInstance.idStop = (cell.representedDataItem?.id)!
+            Stop.selectedStop = (cell.representedDataItem?.id)!
         }
 //        dismissViewControllerAnimated(true, completion: nil)
     }
     
     // MARK: UISearchResultsUpdating
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         filterString = searchController.searchBar.text ?? ""
     }
 }

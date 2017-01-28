@@ -9,18 +9,18 @@
 import UIKit
 
 class DepartureboardViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout    {
+    @IBOutlet weak var sentNotificationLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     var departures = [ApiDeparture]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(DepartureboardViewController.downloadDepartureData), name: NSNotification.Name(rawValue: mySpecialNotificationKey), object: nil)
         collectionView.delegate = self
         collectionView.dataSource = self
         
         downloadDepartureData()
     }
-    
     func downloadDepartureData () {
         ApiService.sharedInstance.getDepartureboards {JSON, NSError in
             if NSError != nil {
@@ -30,16 +30,16 @@ class DepartureboardViewController: UIViewController, UICollectionViewDelegate, 
                 let apiDepartureboard = ApiDepartureboard(fromJson: JSON)
                 self.departures = apiDepartureboard.departures
                 
-                dispatch_async(dispatch_get_main_queue()) {
+                DispatchQueue.main.async {
                     self.collectionView.reloadData()
                 }
             }
         }
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if let cell = collectionView.dequeueReusableCellWithReuseIdentifier("DepartureCell", forIndexPath: indexPath) as? DepartureCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DepartureCell", for: indexPath) as? DepartureCell {
             
             let departure = self.departures[indexPath.row]
             cell.configureCell(departure)
@@ -51,18 +51,18 @@ class DepartureboardViewController: UIViewController, UICollectionViewDelegate, 
         }
     }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return departures.count
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return CGSizeMake(260, 430)
+        return CGSize(width: 260, height: 430)
     }
 }
 

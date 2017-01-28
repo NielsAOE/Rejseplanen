@@ -21,4 +21,5 @@ extension Stop {
             
         ]
     }()
+    static var selectedStop = "8600718"
 }

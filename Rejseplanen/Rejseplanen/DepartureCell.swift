@@ -17,7 +17,7 @@ class DepartureCell: UICollectionViewCell {
     @IBOutlet weak var departureFrom: UILabel!
     @IBOutlet weak var departureTo: UILabel!
     
-    func configureCell(departure: ApiDeparture) {
+    func configureCell(_ departure: ApiDeparture) {
         
         if let name = departure.name{
             departureName.text = name

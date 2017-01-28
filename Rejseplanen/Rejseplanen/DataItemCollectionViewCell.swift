@@ -42,14 +42,14 @@ class DataItemCollectionViewCell: UICollectionViewCell {
     
     // MARK: UIFocusEnvironment
     
-    override func didUpdateFocusInContext(context: UIFocusUpdateContext, withAnimationCoordinator coordinator: UIFocusAnimationCoordinator) {
+    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
         /*
             Update the label's alpha value using the `UIFocusAnimationCoordinator`.
             This will ensure all animations run alongside each other when the focus
             changes.
         */
         coordinator.addCoordinatedAnimations({
-            if self.focused {
+            if self.isFocused {
                 self.label.alpha = 1.0
             }
             else {

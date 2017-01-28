@@ -17,7 +17,7 @@ class ApiDepartureboard {
      * Instantiate the instance using the passed json values to set the properties values
      */
     init(fromJson json: JSON!){
-        if json == nil{
+        if json == JSON.null{
             return
         }
         departures = [ApiDeparture]()
